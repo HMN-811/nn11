@@ -102,6 +102,8 @@ model.compile(
     loss = 'sparse_categorical_crossentropy',
     metrics = ['accuracy']
 )
+# 加载训练数据集和测试数据集
 train_ds, test_ds = mnist_dataset()
+# 训练模型，指定训练数据集和训练轮数（epochs）
 model.fit(train_ds, epochs=5)
 model.evaluate(test_ds)
